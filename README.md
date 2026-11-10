@@ -1,5 +1,7 @@
 # Project-Sem-3
 # LearnSphere: Online Learning & Course Portal
+# link for guthub pages deployment:
+https://milan01062006.github.io/Project-Sem-3/index.html
 
 A fully responsive, single-page website for browsing online courses, viewing course details, meeting instructors and registering for a course. Built as a front-end learning project with **HTML5, CSS3 (Grid & Flexbox), Bootstrap 5 and jQuery**.
 
