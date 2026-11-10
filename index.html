@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LearnSphere | Online Learning &amp; Course Portal</title>
+
+  <!-- Bootstrap 5 CSS + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Our custom styles -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-portal sticky-top">
+      <div class="container">
+        <a class="navbar-brand logo" href="#home">
+          <i class="bi bi-mortarboard-fill"></i> LearnSphere
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-md-center nav-flex">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+            <!-- Visible only on large screens -->
+            <li class="nav-item d-none d-lg-block ms-lg-2">
+              <a class="btn btn-orange btn-sm" href="#register">Enroll Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero section-pad">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-7">
+            <h1 class="hero-title">Learn New Skills. Build Your Future.</h1>
+            <p class="hero-tagline">
+              Join thousands of learners and master web development, data science
+              and design with expert-led, hands-on courses &mdash; anytime, anywhere.
+            </p>
+            <a href="#courses" class="btn btn-orange btn-lg">Explore Courses</a>
+          </div>
+
+          <!-- Hidden on phones, shown from tablet size up -->
+          <div class="col-md-5 d-none d-md-block">
+            <div class="hero-stats">
+              <div class="stat-card"><strong>50+</strong><span>Courses</span></div>
+              <div class="stat-card"><strong>20k+</strong><span>Students</span></div>
+              <div class="stat-card"><strong>4.8</strong><span>Avg. Rating</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
+    <section id="courses" class="section-pad">
+      <div class="container">
+        <h2 class="section-title text-center">Popular Courses</h2>
+        <p class="section-sub text-center">Pick a course and start learning today.</p>
+
+        <!-- Search + Filter controls -->
+        <div class="row g-3 align-items-center mb-4">
+          <div class="col-12 col-md-5 col-lg-4">
+            <input type="text" id="courseSearch" class="form-control search-box"
+                   placeholder="Search courses..." aria-label="Search courses">
+          </div>
+          <div class="col-12 col-md-7 col-lg-8">
+            <div class="filter-bar" role="group" aria-label="Filter by category">
+              <button class="btn filter-btn active" data-filter="All">All</button>
+              <button class="btn filter-btn" data-filter="Web Development">Web Development</button>
+              <button class="btn filter-btn" data-filter="Data Science">Data Science</button>
+              <button class="btn filter-btn" data-filter="Design">Design</button>
+            </div>
+          </div>
+        </div>
+
+        <p id="resultCount" class="result-count"></p>
+
+        <!-- CSS Grid of course cards -->
+        <div class="course-grid" id="courseGrid">
+
+          <article class="course-card" data-id="web-bootcamp" data-category="Web Development"
+                   data-title="Modern Web Development Bootcamp">
+            <img src="https://picsum.photos/seed/webdev/600/400" alt="Web development course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Web Development</span>
+              <h3 class="course-title">Modern Web Development Bootcamp</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 12 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+          <article class="course-card" data-id="react-mastery" data-category="Web Development"
+                   data-title="React and Front-End Mastery">
+            <img src="https://picsum.photos/seed/reactjs/600/400" alt="React course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Web Development</span>
+              <h3 class="course-title">React &amp; Front-End Mastery</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 8 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.7</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+          <article class="course-card" data-id="python-ds" data-category="Data Science"
+                   data-title="Python for Data Science">
+            <img src="https://picsum.photos/seed/python/600/400" alt="Python data science course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Data Science</span>
+              <h3 class="course-title">Python for Data Science</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 10 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+          <article class="course-card" data-id="ml-foundations" data-category="Data Science"
+                   data-title="Machine Learning Foundations">
+            <img src="https://picsum.photos/seed/machinelearning/600/400" alt="Machine learning course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Data Science</span>
+              <h3 class="course-title">Machine Learning Foundations</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 14 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.6</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+          <article class="course-card" data-id="uiux" data-category="Design"
+                   data-title="UI/UX Design Essentials">
+            <img src="https://picsum.photos/seed/uiuxdesign/600/400" alt="UI UX design course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Design</span>
+              <h3 class="course-title">UI/UX Design Essentials</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 6 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+          <article class="course-card" data-id="graphic" data-category="Design"
+                   data-title="Graphic Design and Branding">
+            <img src="https://picsum.photos/seed/graphicdesign/600/400" alt="Graphic design course" class="course-img">
+            <div class="course-body">
+              <span class="badge-cat">Design</span>
+              <h3 class="course-title">Graphic Design &amp; Branding</h3>
+              <div class="course-meta">
+                <span><i class="bi bi-clock"></i> 8 Weeks</span>
+                <span><i class="bi bi-star-fill"></i> 4.5</span>
+              </div>
+              <button class="btn btn-orange w-100 btn-details">View Details</button>
+            </div>
+          </article>
+
+        </div>
+
+        <p id="noResults" class="no-results text-center">
+          No courses found. Try a different search or category.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= INSTRUCTORS ================= -->
+    <section id="instructors" class="section-pad">
+      <div class="container">
+        <h2 class="section-title text-center">Meet Our Instructors</h2>
+        <p class="section-sub text-center">Learn from industry professionals with real-world experience.</p>
+
+        <!-- Flexbox layout -->
+        <div class="instructor-flex">
+
+          <article class="instructor-card">
+            <img src="https://i.pravatar.cc/300?img=12" alt="Aarav Sharma" class="instructor-photo">
+            <h3 class="instructor-name">Aarav Sharma</h3>
+            <p class="instructor-role">Web Development</p>
+            <p class="instructor-bio">Full-stack developer with 10 years of experience building scalable web apps.</p>
+          </article>
+
+          <article class="instructor-card">
+            <img src="https://i.pravatar.cc/300?img=47" alt="Priya Verma" class="instructor-photo">
+            <h3 class="instructor-name">Priya Verma</h3>
+            <p class="instructor-role">Data Science &amp; ML</p>
+            <p class="instructor-bio">Data scientist who loves turning messy data into clear, useful insights.</p>
+          </article>
+
+          <article class="instructor-card">
+            <img src="https://i.pravatar.cc/300?img=32" alt="Neha Kapoor" class="instructor-photo">
+            <h3 class="instructor-name">Neha Kapoor</h3>
+            <p class="instructor-role">UI/UX Design</p>
+            <p class="instructor-bio">Product designer focused on simple, accessible and user-friendly interfaces.</p>
+          </article>
+
+          <article class="instructor-card">
+            <img src="https://i.pravatar.cc/300?img=15" alt="Rohan Mehta" class="instructor-photo">
+            <h3 class="instructor-name">Rohan Mehta</h3>
+            <p class="instructor-role">Graphic Design</p>
+            <p class="instructor-bio">Brand designer who has helped over 100 startups create their visual identity.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REGISTRATION ================= -->
+    <section id="register" class="section-pad">
+      <div class="container">
+        <h2 class="section-title text-center">Register Now</h2>
+        <p class="section-sub text-center">Fill in the form below to reserve your seat.</p>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-7">
+            <div class="form-card">
+
+              <!-- Success message (hidden until form is valid) -->
+              <div id="formSuccess" class="success-box" role="alert"></div>
+
+              <form id="registerForm" novalidate>
+
+                <div class="mb-3">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input type="text" id="fullName" class="form-control" placeholder="e.g. Ananya Singh">
+                  <small class="error-msg" id="fullName-error"></small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" class="form-control" placeholder="you@example.com">
+                  <small class="error-msg" id="email-error"></small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" class="form-control" placeholder="10-digit mobile number">
+                  <small class="error-msg" id="phone-error"></small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="course" class="form-label">Select Course</label>
+                  <select id="course" class="form-select">
+                    <option value="">-- Choose a course --</option>
+                    <option value="web-bootcamp">Modern Web Development Bootcamp</option>
+                    <option value="react-mastery">React &amp; Front-End Mastery</option>
+                    <option value="python-ds">Python for Data Science</option>
+                    <option value="ml-foundations">Machine Learning Foundations</option>
+                    <option value="uiux">UI/UX Design Essentials</option>
+                    <option value="graphic">Graphic Design &amp; Branding</option>
+                  </select>
+                  <small class="error-msg" id="course-error"></small>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" id="terms" class="form-check-input">
+                  <label for="terms" class="form-check-label">I agree to the Terms &amp; Conditions</label>
+                  <small class="error-msg d-block" id="terms-error"></small>
+                </div>
+
+                <button type="submit" class="btn btn-orange btn-lg w-100">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-flex">
+
+        <div class="footer-col">
+          <h4>LearnSphere</h4>
+          <p>Affordable, practical online learning for everyone.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#instructors">Instructors</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Bareilly, Uttar Pradesh, India</li>
+            <li><i class="bi bi-envelope-fill"></i> hello@learnsphere.com</li>
+            <li><i class="bi bi-telephone-fill"></i> +91 98765 43210</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <p class="copyright">&copy; 2026 LearnSphere. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- ================= COURSE DETAILS MODAL ================= -->
+  <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12 col-md-5">
+              <img id="modalImage" src="" alt="" class="modal-img">
+              <ul class="list-unstyled modal-facts">
+                <li><i class="bi bi-clock"></i> <strong>Duration:</strong> <span id="modalDuration"></span></li>
+                <li><i class="bi bi-cash-coin"></i> <strong>Fee:</strong> <span id="modalFee"></span></li>
+                <li><i class="bi bi-star-fill"></i> <strong>Rating:</strong> <span id="modalRating"></span></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-7">
+              <h4 class="modal-sub">About this course</h4>
+              <p id="modalDesc"></p>
+
+              <h4 class="modal-sub">Instructor</h4>
+              <div class="modal-instructor">
+                <img id="modalInstImg" src="" alt="" class="modal-inst-photo">
+                <div>
+                  <strong id="modalInstName"></strong><br>
+                  <small id="modalInstRole"></small>
+                  <p id="modalInstBio" class="mb-0"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="modal-sub mt-4">Course Modules</h4>
+          <ul id="modalModules" class="module-list list-unstyled"></ul>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="enrollFromModal" class="btn btn-orange">Enroll in this Course</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Bootstrap JS bundle, then our script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
