@@ -14,14 +14,7 @@ It works on desktop, tablet and mobile screens.
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Color Palette](#color-palette)
-- [Responsive Design](#responsive-design)
-- [How It Works](#how-it-works)
-- [Customization Guide](#customization-guide)
-- [Browser Support](#browser-support)
-- [Credits](#credits)
-- [License](#license)
+
 
 ---
 
